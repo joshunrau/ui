@@ -29,9 +29,6 @@
     "dev": "storybook dev -p 6006",
     "format": "prettier --write src"
   },
-  "dependencies": {
-    "tailwind-merge": "^1.14.0"
-  },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.4.0",
     "@storybook/addon-interactions": "^7.4.0",
