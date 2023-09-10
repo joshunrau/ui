@@ -1,0 +1,21 @@
+{
+    "include": ["src/**/*"],
+    "compilerOptions": {
+      "declaration": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "isolatedModules": true,
+      "jsx": "react",
+      "lib": ["DOM", "DOM.Iterable", "ESNext"],
+      "module": "ESNext",
+      "moduleResolution": "Bundler",
+      "noUncheckedIndexedAccess": true,
+      "outDir": "dist",
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "strict": true,
+      "target": "ESNext",
+      "verbatimModuleSyntax": true
+    }
+  }
