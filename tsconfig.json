@@ -1,19 +1,23 @@
 {
-    "include": ["src/**/*"],
-    "compilerOptions": {
-      "declaration": true,
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
-      "isolatedModules": true,
-      "jsx": "react",
-      "lib": ["DOM", "DOM.Iterable", "ESNext"],
-      "module": "Node16",
-      "moduleResolution": "Node16",
-      "noUncheckedIndexedAccess": true,
-      "skipLibCheck": true,
-      "sourceMap": true,
-      "strict": true,
-      "target": "ESNext",
-      "verbatimModuleSyntax": true
-    }
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@/*": ["*"]
+    },
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ESNext",
+    "verbatimModuleSyntax": true
   }
+}
