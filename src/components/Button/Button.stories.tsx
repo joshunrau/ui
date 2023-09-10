@@ -11,4 +11,14 @@ export default {
   component: Button
 } satisfies Meta<typeof Button>;
 
-export const Default: Story = {};
+export const Primary: Story = {
+  args: {
+    variant: 'primary'
+  }
+};
+
+export const Secondary: Story = {
+  args: {
+    variant: 'secondary'
+  }
+};
