@@ -1,6 +1,7 @@
 // @ts-check
 
 import path from 'path';
+import plugin from 'tailwindcss/plugin';
 
 /**
  * Note, using `__dirname` is a hack which will work when run with bun (e.g., vite dev server)
@@ -11,6 +12,7 @@ import path from 'path';
 /** @type {import('tailwindcss').Config & { content: any[] }} */
 export default {
   content: [path.resolve(__dirname, './src/**/*.{js,jsx,ts,tsx}')],
+  darkMode: ['class', '[data-mode="dark"]'],
   theme: {
     extend: {
       container: {
@@ -18,5 +20,27 @@ export default {
       }
     }
   },
-  plugins: []
+  plugins: [
+    plugin(({ addBase, addUtilities, theme }) => {
+      addBase({
+        html: {
+          backgroundColor: theme('colors.slate.100'),
+          color: theme('colors.slate.900'),
+          '&[data-mode="dark"]': {
+            backgroundColor: theme('colors.slate.900'),
+            color: theme('colors.slate.100')
+          }
+        }
+      });
+      addUtilities({
+        '.scrollbar-none': {
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          }
+        }
+      });
+    })
+  ]
 };
