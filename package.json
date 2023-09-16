@@ -24,7 +24,6 @@
     "tailwind.config.js"
   ],
   "scripts": {
-    "build": "tsc -b tsconfig.build.json",
     "build-storybook": "storybook build",
     "dev": "storybook dev -p 6006",
     "format": "prettier --write src"
