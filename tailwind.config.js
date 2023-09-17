@@ -32,6 +32,7 @@ export default {
           }
         }
       });
+
       addUtilities({
         '.scrollbar-none': {
           '-ms-overflow-style': 'none',
@@ -39,6 +40,9 @@ export default {
           '&::-webkit-scrollbar': {
             display: 'none'
           }
+        },
+        '.backdrop-emphasize': {
+          '@apply backdrop-brightness-95 dark:backdrop-brightness-150': {}
         }
       });
     })
