@@ -1,5 +1,4 @@
 {
-  "include": ["src/**/*"],
   "compilerOptions": {
     "allowImportingTsExtensions": true,
     "baseUrl": "src",
@@ -11,16 +10,17 @@
     "module": "ESNext",
     "moduleDetection": "force",
     "moduleResolution": "Bundler",
+    "noEmit": true,
+    "noUncheckedIndexedAccess": true,
     "paths": {
       "@/*": ["*"]
     },
-    "noEmit": true,
-    "noUncheckedIndexedAccess": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
     "types": ["bun-types"],
     "verbatimModuleSyntax": true
-  }
+  },
+  "include": ["src"]
 }
