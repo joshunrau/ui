@@ -1,6 +1,8 @@
 // @ts-check
 
 import path from 'path';
+
+import headlessui from '@headlessui/tailwindcss';
 import plugin from 'tailwindcss/plugin';
 
 /**
@@ -21,6 +23,7 @@ export default {
     }
   },
   plugins: [
+    headlessui,
     plugin(({ addBase, addUtilities, theme }) => {
       addBase({
         html: {
