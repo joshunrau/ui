@@ -21,8 +21,8 @@ export const ThemeToggle = ({ className }: ThemeToggleProps) => {
         'rounded-md p-2 transition-transform hover:backdrop-brightness-95 dark:hover:backdrop-brightness-150',
         className
       )}
-      type="button"
       onClick={toggleTheme}
+      type="button"
     >
       {theme === 'dark' ? <SunIcon height={24} width={24} /> : <MoonIcon height={24} width={24} />}
     </button>

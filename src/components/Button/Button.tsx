@@ -1,9 +1,8 @@
 import React from 'react';
-
 import { twMerge } from 'tailwind-merge';
 
 export type ButtonProps = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'lg' | 'md' | 'sm' | 'xl' | 'xs';
   variant?: 'primary' | 'secondary';
 };
 

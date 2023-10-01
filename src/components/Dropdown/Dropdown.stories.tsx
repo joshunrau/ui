@@ -9,7 +9,7 @@ export default { component: Dropdown } satisfies Meta<typeof Dropdown>;
 export const Default: Story = {
   args: {
     label: 'My Dropdown',
-    options: ['Option 1', 'Option 2', 'Option 3'],
-    onSelection: (selection) => alert(`Selection: ${selection}`)
+    onSelection: (selection) => alert(`Selection: ${selection}`),
+    options: ['Option 1', 'Option 2', 'Option 3']
   }
 };

@@ -1,24 +1,23 @@
-import { useState } from 'react';
-
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { clsx } from 'clsx';
+import { useState } from 'react';
 
 export type DropdownProps<T extends string> = {
   label: string;
-  options: T[];
   onSelection: (selection: T) => void;
+  options: T[];
 };
 
-export const Dropdown = <const T extends string>({ label, options, onSelection }: DropdownProps<T>) => {
+export const Dropdown = <const T extends string>({ label, onSelection, options }: DropdownProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="relative w-min">
       <button
         className="flex items-center justify-center rounded-md p-2 hover:backdrop-emphasize"
-        type="button"
         onClick={() => {
           setIsOpen(!isOpen);
         }}
+        type="button"
       >
         <span className="whitespace-nowrap">{label}</span>
         <ChevronDownIcon className="ml-1 h-4 w-4" />
@@ -33,10 +32,10 @@ export const Dropdown = <const T extends string>({ label, options, onSelection }
           <button
             className="block w-full p-2 text-center hover:backdrop-emphasize"
             key={option}
-            type="button"
             onClick={() => {
               onSelection(option);
             }}
+            type="button"
           >
             {option}
           </button>

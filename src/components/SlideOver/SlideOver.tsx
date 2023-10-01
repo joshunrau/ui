@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
+import React from 'react';
 
 export type SlideOverProps = {
   isOpen: boolean;
@@ -9,7 +9,7 @@ export type SlideOverProps = {
 
 export const SlideOver = ({ isOpen, setIsOpen }: SlideOverProps) => {
   return (
-    <Transition.Root show={isOpen} as={React.Fragment}>
+    <Transition.Root as={React.Fragment} show={isOpen}>
       <Dialog as="div" className="fixed inset-0 overflow-hidden" onClose={setIsOpen}>
         <div className="absolute inset-0 overflow-hidden">
           <Transition.Child
@@ -41,11 +41,11 @@ export const SlideOver = ({ isOpen, setIsOpen }: SlideOverProps) => {
                       <Dialog.Title className="text-lg font-medium text-gray-900"> Panel title </Dialog.Title>
                       <div className="ml-3 flex h-7 items-center">
                         <button
-                          type="button"
                           className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                           onClick={() => setIsOpen(false)}
+                          type="button"
                         >
-                          <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                          <XMarkIcon aria-hidden="true" className="h-6 w-6" />
                         </button>
                       </div>
                     </div>
@@ -53,7 +53,7 @@ export const SlideOver = ({ isOpen, setIsOpen }: SlideOverProps) => {
                   <div className="relative mt-6 flex-1 px-4 sm:px-6">
                     {/* Replace with your content */}
                     <div className="absolute inset-0 px-4 sm:px-6">
-                      <div className="h-full border-2 border-dashed border-gray-200" aria-hidden="true" />
+                      <div aria-hidden="true" className="h-full border-2 border-dashed border-gray-200" />
                     </div>
                     {/* /End replace */}
                   </div>

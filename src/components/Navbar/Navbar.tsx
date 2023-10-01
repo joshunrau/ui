@@ -1,11 +1,13 @@
+import React from 'react';
 import { match } from 'ts-pattern';
+
 import { Dropdown } from '../Dropdown';
 import { ThemeToggle } from '../ThemeToggle';
 
 export type NavbarAnchorItem = {
+  href: string;
   kind: 'a';
   label: string;
-  href: string;
 };
 
 export type NavbarButtonItem = {
@@ -14,15 +16,15 @@ export type NavbarButtonItem = {
   onClick: () => void;
 };
 
-export type NavbarItem = NavbarButtonItem | NavbarAnchorItem;
+export type NavbarItem = NavbarAnchorItem | NavbarButtonItem;
 
 export type NavbarProps = {
-  title: string;
   items: NavbarItem[];
   logo?: React.ReactNode;
+  title: string;
 };
 
-export const Navbar = ({ title, items, logo }: NavbarProps) => {
+export const Navbar = ({ items, logo, title }: NavbarProps) => {
   return (
     <header className="w-full bg-white/80 text-slate-700 shadow backdrop-blur-lg dark:bg-slate-800/75 dark:text-slate-300">
       <div className="container flex items-center justify-between py-3 font-medium">
@@ -38,11 +40,14 @@ export const Navbar = ({ title, items, logo }: NavbarProps) => {
         <div className="flex items-center">
           <nav className="flex gap-3">
             {items.map((item) => (
-              <div className="flex items-center justify-center p-2 [&>*]:hover:text-slate-900 [&>*]:dark:hover:text-slate-100">
+              <div
+                className="flex items-center justify-center p-2 [&>*]:hover:text-slate-900 [&>*]:dark:hover:text-slate-100"
+                key={item.label}
+              >
                 {match(item)
-                  .with({ kind: 'a' }, ({ label, href }) => <a href={href}>{label}</a>)
+                  .with({ kind: 'a' }, ({ href, label }) => <a href={href}>{label}</a>)
                   .with({ kind: 'button' }, ({ label, onClick }) => (
-                    <button type="button" onClick={onClick}>
+                    <button onClick={onClick} type="button">
                       {label}
                     </button>
                   ))
@@ -55,10 +60,10 @@ export const Navbar = ({ title, items, logo }: NavbarProps) => {
             <ThemeToggle />
             <Dropdown
               label="EN"
-              options={['EN', 'FR']}
               onSelection={(selection) => {
                 alert(selection);
               }}
+              options={['EN', 'FR']}
             />
           </div>
         </div>

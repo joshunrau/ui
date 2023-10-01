@@ -33,7 +33,8 @@
   "scripts": {
     "build-storybook": "storybook build",
     "dev": "storybook dev -p 6006",
-    "format": "prettier --write src"
+    "format": "prettier --write src",
+    "lint": "eslint --fix src"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
