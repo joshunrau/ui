@@ -22,7 +22,7 @@ export const SlideOver = ({ isOpen, setIsOpen }: SlideOverProps) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+            <Dialog.Overlay className="absolute inset-0 bg-slate-500 bg-opacity-75 transition-opacity" />
           </Transition.Child>
 
           <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
@@ -39,10 +39,10 @@ export const SlideOver = ({ isOpen, setIsOpen }: SlideOverProps) => {
                 <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
                   <div className="px-4 sm:px-6">
                     <div className="flex items-start justify-between">
-                      <Dialog.Title className="text-lg font-medium text-gray-900"> Panel title </Dialog.Title>
+                      <Dialog.Title className="text-lg font-medium text-slate-900"> Panel title </Dialog.Title>
                       <div className="ml-3 flex h-7 items-center">
                         <button
-                          className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                          className="rounded-md bg-white text-slate-400 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                           onClick={() => setIsOpen(false)}
                           type="button"
                         >
@@ -54,7 +54,7 @@ export const SlideOver = ({ isOpen, setIsOpen }: SlideOverProps) => {
                   <div className="relative mt-6 flex-1 px-4 sm:px-6">
                     {/* Replace with your content */}
                     <div className="absolute inset-0 px-4 sm:px-6">
-                      <div aria-hidden="true" className="h-full border-2 border-dashed border-gray-200" />
+                      <div aria-hidden="true" className="h-full border-2 border-dashed border-slate-200" />
                     </div>
                     {/* /End replace */}
                   </div>
