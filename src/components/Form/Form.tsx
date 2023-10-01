@@ -12,7 +12,7 @@ type FormProps = {
 const FormComponent = ({ children, className }: FormProps) => {
   // const [values, setValues] = useState([]);
   return (
-    <FormContext.Provider value={{ values: [] }}>
+    <FormContext.Provider value={{ values: {} }}>
       <form className={cn('space-y-6', className)}>{children}</form>
     </FormContext.Provider>
   );

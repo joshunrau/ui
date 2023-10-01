@@ -7,7 +7,7 @@ import { SlideOver } from './SlideOver';
 
 type Story = StoryObj<typeof SlideOver>;
 
-export default {
+const meta: Meta<typeof SlideOver> = {
   component: SlideOver,
   decorators: [
     (Story) => {
@@ -26,6 +26,8 @@ export default {
       );
     }
   ]
-} satisfies Meta<typeof SlideOver>;
+};
+
+export default meta;
 
 export const Default: Story = {};
