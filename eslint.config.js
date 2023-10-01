@@ -1,6 +1,6 @@
 import { createConfig } from '@joshunrau/eslint-config';
 
-const baseConfig = createConfig({
+export default createConfig({
   base: {
     env: 'browser'
   },
@@ -10,4 +10,3 @@ const baseConfig = createConfig({
   }
 });
 
-export default [{ ignores: ['dist/*'] }, baseConfig];

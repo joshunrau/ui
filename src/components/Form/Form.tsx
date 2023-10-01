@@ -1,7 +1,8 @@
 import { type ReactNode } from 'react';
 
-import { cn } from '../..';
-import { FormContext } from '../../context/FormContext';
+import { FormContext } from '@/context/FormContext';
+import { cn } from '@/utils';
+
 import { FormText } from './FormText';
 
 type FormProps = {
