@@ -1,6 +1,6 @@
 import { type HTMLInputTypeAttribute, useContext } from 'react';
 
-import { FormContext } from '../../context/FormContext';
+import { FormContext } from '@/context/FormContext';
 
 export type FormTextProps = {
   label: string;

@@ -14,8 +14,40 @@ import plugin from 'tailwindcss/plugin';
 
 /** @type {import('tailwindcss').Config & { content: any[] }} */
 export default {
+  // eslint-disable-next-line no-undef
   content: [path.resolve(__dirname, './src/**/*.{js,jsx,ts,tsx}')],
   darkMode: ['class', '[data-mode="dark"]'],
+  plugins: [
+    headlessui,
+    formsPlugin,
+    plugin(({ addBase, addUtilities, theme }) => {
+      addBase({
+        html: {
+          '&[data-mode="dark"]': {
+            backgroundColor: theme('colors.slate.900'),
+            color: theme('colors.slate.100')
+          },
+          backgroundColor: theme('colors.slate.100'),
+          color: theme('colors.slate.900')
+        }
+      });
+      addUtilities({
+        '.backdrop-emphasize': {
+          '@apply backdrop-brightness-95 dark:backdrop-brightness-150': {}
+        },
+        '.scrollbar-none': {
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          },
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none'
+        },
+        '.text-muted': {
+          '@apply text-slate-700 dark:text-slate-300': {}
+        }
+      });
+    })
+  ],
   theme: {
     extend: {
       container: {
@@ -29,36 +61,5 @@ export default {
         128: '32rem'
       }
     }
-  },
-  plugins: [
-    headlessui,
-    formsPlugin,
-    plugin(({ addBase, addUtilities, theme }) => {
-      addBase({
-        html: {
-          backgroundColor: theme('colors.slate.100'),
-          color: theme('colors.slate.900'),
-          '&[data-mode="dark"]': {
-            backgroundColor: theme('colors.slate.900'),
-            color: theme('colors.slate.100')
-          }
-        }
-      });
-      addUtilities({
-        '.scrollbar-none': {
-          '-ms-overflow-style': 'none',
-          'scrollbar-width': 'none',
-          '&::-webkit-scrollbar': {
-            display: 'none'
-          }
-        },
-        '.backdrop-emphasize': {
-          '@apply backdrop-brightness-95 dark:backdrop-brightness-150': {}
-        },
-        '.text-muted': {
-          '@apply text-slate-600 dark:text-slate-300': {}
-        }
-      });
-    })
-  ]
+  }
 };
