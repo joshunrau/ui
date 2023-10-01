@@ -1,14 +1,15 @@
 import React from 'react';
 
-import { cn } from '@/utils';
 import { match } from 'ts-pattern';
 
-export interface ButtonProps extends Omit<React.ComponentPropsWithoutRef<'button'>, 'children'> {
+import { cn } from '@/utils';
+
+export type ButtonProps = {
   label: string;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'lg' | 'md' | 'sm';
   type: React.ButtonHTMLAttributes<HTMLButtonElement>['type'];
-  variant?: 'primary' | 'secondary' | 'danger';
-}
+  variant?: 'danger' | 'primary' | 'secondary';
+} & Omit<React.ComponentPropsWithoutRef<'button'>, 'children'>;
 
 export const Button = ({ className, label, size = 'md', variant = 'primary', ...props }: ButtonProps) => {
   return (
@@ -24,7 +25,8 @@ export const Button = ({ className, label, size = 'md', variant = 'primary', ...
           .with({ variant: 'primary' }, () => 'bg-slate-800 text-slate-100 hover:bg-slate-700 dark:bg-sky-700 dark:hover:bg-sky-600')
           .with({ variant: 'secondary' }, () => 'border border-slate-300 bg-inherit hover:backdrop-emphasize dark:border-slate-600')
           .with({ variant: 'danger' }, () => 'bg-red-600 text-white hover:bg-opacity-90')
-          .exhaustive()
+          .exhaustive(),
+        className
       )}
       {...props}
     >

@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
-
 import { useState } from 'react';
 
-import { SlideOver } from './SlideOver';
+import type { Meta, StoryObj } from '@storybook/react';
+
 import { Button } from '..';
+import { SlideOver } from './SlideOver';
 
 type Story = StoryObj<typeof SlideOver>;
 
@@ -16,10 +16,10 @@ export default {
         <div>
           <Button
             label="Open"
-            type="button"
             onClick={() => {
               setIsOpen(true);
             }}
+            type="button"
           />
           <Story args={{ isOpen, setIsOpen }} />
         </div>

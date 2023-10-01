@@ -1,6 +1,7 @@
+import { useState } from 'react';
+
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { clsx } from 'clsx';
-import { useState } from 'react';
 
 export type DropdownProps<T extends string> = {
   label: string;

@@ -1,8 +1,11 @@
-import path from 'path';
-
 import { createConfig } from '@joshunrau/eslint-config';
 
 export default createConfig({
+  base: {
+    env: 'browser'
+  },
   jsx: true,
-  project: './tsconfig.json'
+  ts: {
+    project: './tsconfig.json'
+  }
 });

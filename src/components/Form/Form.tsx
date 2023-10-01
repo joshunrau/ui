@@ -1,14 +1,22 @@
+import { type ReactNode } from 'react';
+
+import { FormContext } from '@/context/FormContext';
 import { cn } from '@/utils';
 
 import { FormText } from './FormText';
 
 type FormProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 };
 
 const FormComponent = ({ children, className }: FormProps) => {
-  return <form className={cn('space-y-6', className)}>{children}</form>;
+  // const [values, setValues] = useState([]);
+  return (
+    <FormContext.Provider value={{ values: [] }}>
+      <form className={cn('space-y-6', className)}>{children}</form>
+    </FormContext.Provider>
+  );
 };
 
 const Form = Object.assign(FormComponent, {
