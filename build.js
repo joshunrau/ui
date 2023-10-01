@@ -1,6 +1,7 @@
 // @ts-check
 
 import path from 'path';
+import process from 'process';
 
 import esbuild from 'esbuild';
 
@@ -22,6 +23,6 @@ if (watch) {
   await ctx.watch();
   console.log('Watching...');
 } else {
-  const result = await esbuild.build(options);
+  await esbuild.build(options);
   console.log('Done!');
 }
