@@ -15,7 +15,7 @@ export const Button = ({ className, label, size = 'md', variant = 'primary', ...
   return (
     <button
       className={cn(
-        'flex items-center justify-center rounded-md font-medium shadow-md focus:outline-none disabled:cursor-not-allowed disabled:opacity-70',
+        'flex items-center justify-center rounded-md font-medium shadow focus:outline-none disabled:cursor-not-allowed disabled:opacity-70',
         match({ size })
           .with({ size: 'sm' }, () => 'px-4 py-2 text-sm')
           .with({ size: 'md' }, () => 'text-md px-6 py-2')
