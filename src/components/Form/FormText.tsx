@@ -1,11 +1,11 @@
-export interface InputProps {
+export interface FormTextProps {
   name: string;
   label: string;
   placeholder?: string;
   type?: React.HTMLInputTypeAttribute;
 }
 
-export const Input = (props: InputProps) => {
+export const FormText = (props: FormTextProps) => {
   return (
     <div className="space-y-1">
       <label className="block text-sm font-medium text-muted" htmlFor={props.name}>

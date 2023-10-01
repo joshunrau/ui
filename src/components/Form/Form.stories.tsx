@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Form } from './Form';
-import { Input } from './Input';
+import { Button } from '..';
 
 type Story = StoryObj<typeof Form>;
 
@@ -11,7 +11,8 @@ export const Default: Story = {
   args: {
     children: (
       <>
-        <Input name="text" label="Text" />
+        <Form.Text name="text" label="Text" />
+        <Button label="Submit" type="button" />
       </>
     )
   }
