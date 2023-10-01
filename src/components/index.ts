@@ -1,6 +1,7 @@
 export * from './Button';
 export * from './Card';
 export * from './Dropdown';
+export * from './ErrorBoundary';
 export * from './Form';
 export * from './Navbar';
 export * from './NotificationHub';
