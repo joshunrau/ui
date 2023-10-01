@@ -56,10 +56,7 @@ export default {
           '@apply backdrop-brightness-95 dark:backdrop-brightness-150': {}
         },
         '.text-muted': {
-          color: theme('colors.slate.600'),
-          '&[data-mode="dark"]': {
-            color: theme('colors.slate.300')
-          }
+          '@apply text-slate-600 dark:text-slate-300': {}
         }
       });
     })

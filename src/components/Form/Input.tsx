@@ -8,11 +8,11 @@ export interface InputProps {
 export const Input = (props: InputProps) => {
   return (
     <div className="space-y-1">
-      <label className="block text-sm font-medium text-gray-700" htmlFor={props.name}>
+      <label className="block text-sm font-medium text-muted" htmlFor={props.name}>
         {props.label}
       </label>
       <input
-        className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+        className="block w-full rounded-md border-slate-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 dark:border-slate-600 dark:bg-slate-800 dark:focus:border-sky-700 dark:focus:ring-sky-700 sm:text-sm"
         id={props.name}
         name={props.name}
         placeholder={props.placeholder}
