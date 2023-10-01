@@ -34,6 +34,7 @@
   "scripts": {
     "build": "bun build.js && tsc",
     "build-storybook": "storybook build",
+    "dev": "bun build.js --watch",
     "format": "prettier --write src",
     "lint": "eslint --fix src",
     "storybook": "storybook dev -p 6006"
