@@ -3,6 +3,7 @@
 import path from 'path';
 
 import headlessui from '@headlessui/tailwindcss';
+import formsPlugin from '@tailwindcss/forms';
 import plugin from 'tailwindcss/plugin';
 
 /**
@@ -19,11 +20,19 @@ export default {
     extend: {
       container: {
         center: true
+      },
+      screens: {
+        xs: '512px'
+      },
+      spacing: {
+        112: '28rem',
+        128: '32rem'
       }
     }
   },
   plugins: [
     headlessui,
+    formsPlugin,
     plugin(({ addBase, addUtilities, theme }) => {
       addBase({
         html: {
@@ -35,7 +44,6 @@ export default {
           }
         }
       });
-
       addUtilities({
         '.scrollbar-none': {
           '-ms-overflow-style': 'none',
