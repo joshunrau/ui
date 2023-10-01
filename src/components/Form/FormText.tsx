@@ -1,5 +1,6 @@
-import { FormContext } from '@/context/FormContext';
 import { type HTMLInputTypeAttribute, useContext } from 'react';
+
+import { FormContext } from '../../context/FormContext';
 
 export type FormTextProps = {
   label: string;
@@ -10,8 +11,6 @@ export type FormTextProps = {
 
 export const FormText = (props: FormTextProps) => {
   const ctx = useContext(FormContext);
-  console.log(ctx);
-
   return (
     <div className="space-y-1">
       <label className="block text-sm font-medium text-muted" htmlFor={props.name}>

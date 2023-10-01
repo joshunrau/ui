@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { match } from 'ts-pattern';
 
 import { Dropdown } from '../Dropdown';
@@ -30,10 +31,7 @@ export const Navbar = ({ items, logo, title }: NavbarProps) => {
       <div className="container flex items-center justify-between py-3 font-medium">
         <div className="flex h-10 items-center gap-3 [&>*]:h-full [&>*]:w-auto">
           {logo}
-          <span
-            className="font-lg whitespace-nowrap align-middle font-semibold leading-none"
-            style={{ height: 'auto' }}
-          >
+          <span className="font-lg whitespace-nowrap align-middle font-semibold leading-none" style={{ height: 'auto' }}>
             {title}
           </span>
         </div>

@@ -1,7 +1,6 @@
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import { twMerge } from 'tailwind-merge';
 
-// import { useTheme } from '@/hooks/useTheme';
 import { useTheme } from '../../hooks/useTheme';
 
 export type ThemeToggleProps = {
@@ -17,10 +16,7 @@ export const ThemeToggle = ({ className }: ThemeToggleProps) => {
 
   return (
     <button
-      className={twMerge(
-        'rounded-md p-2 transition-transform hover:backdrop-brightness-95 dark:hover:backdrop-brightness-150',
-        className
-      )}
+      className={twMerge('rounded-md p-2 transition-transform hover:backdrop-brightness-95 dark:hover:backdrop-brightness-150', className)}
       onClick={toggleTheme}
       type="button"
     >
