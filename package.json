@@ -1,6 +1,6 @@
 {
   "name": "@joshunrau/ui",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Generic React Components and Tailwind Config",
   "keywords": [
     "UI",
@@ -32,11 +32,12 @@
     "tailwind.config.js"
   ],
   "scripts": {
-    "build": "bun build.js && tsc",
-    "build-storybook": "storybook build",
+    "build:dist": "bun build.js && tsc",
+    "build:storybook": "storybook build",
     "dev": "bun build.js --watch",
     "format": "prettier --write src",
     "lint": "eslint --fix src",
+    "push": "bun build:dist && npm publish",
     "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
