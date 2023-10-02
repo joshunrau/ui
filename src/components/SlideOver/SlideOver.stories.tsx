@@ -16,10 +16,10 @@ const meta: Meta<typeof SlideOver> = {
         <div>
           <Button
             label="Open"
+            type="button"
             onClick={() => {
               setIsOpen(true);
             }}
-            type="button"
           />
           <Story args={{ isOpen, setIsOpen }} />
         </div>

@@ -45,7 +45,7 @@ export const Navbar = ({ items, logo, title }: NavbarProps) => {
                 {match(item)
                   .with({ kind: 'a' }, ({ href, label }) => <a href={href}>{label}</a>)
                   .with({ kind: 'button' }, ({ label, onClick }) => (
-                    <button onClick={onClick} type="button">
+                    <button type="button" onClick={onClick}>
                       {label}
                     </button>
                   ))
@@ -58,10 +58,10 @@ export const Navbar = ({ items, logo, title }: NavbarProps) => {
             <ThemeToggle />
             <Dropdown
               label="EN"
+              options={['EN', 'FR']}
               onSelection={(selection) => {
                 alert(selection);
               }}
-              options={['EN', 'FR']}
             />
           </div>
         </div>

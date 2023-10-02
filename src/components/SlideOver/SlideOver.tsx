@@ -43,8 +43,8 @@ export const SlideOver = ({ isOpen, setIsOpen }: SlideOverProps) => {
                       <div className="ml-3 flex h-7 items-center">
                         <button
                           className="rounded-md bg-white text-slate-400 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                          onClick={() => setIsOpen(false)}
                           type="button"
+                          onClick={() => setIsOpen(false)}
                         >
                           <XMarkIcon aria-hidden="true" className="h-6 w-6" />
                         </button>

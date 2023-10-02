@@ -17,8 +17,8 @@ export const ThemeToggle = ({ className }: ThemeToggleProps) => {
   return (
     <button
       className={twMerge('rounded-md p-2 transition-transform hover:backdrop-brightness-95 dark:hover:backdrop-brightness-150', className)}
-      onClick={toggleTheme}
       type="button"
+      onClick={toggleTheme}
     >
       {theme === 'dark' ? <SunIcon height={24} width={24} /> : <MoonIcon height={24} width={24} />}
     </button>
