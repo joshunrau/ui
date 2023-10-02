@@ -17,13 +17,13 @@ const meta: Meta<typeof NotificationHub> = {
           <Story />
           <Button
             label="Add Notification"
+            type="button"
             onClick={() => {
               notifications.addNotification({
                 message: `Notification ${notifications.notifications.length}`,
                 type: 'info'
               });
             }}
-            type="button"
           />
         </div>
       );

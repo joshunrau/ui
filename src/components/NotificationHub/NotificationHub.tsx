@@ -35,10 +35,10 @@ export const NotificationHub = ({ timeout = 5000 }: NotificationHubProps) => {
                     </h5>
                     <button
                       className="inline-flex rounded-md text-slate-400 hover:text-slate-500 focus:outline-none focus:ring-1 focus:ring-sky-500 dark:focus:ring-sky-600"
+                      type="button"
                       onClick={() => {
                         dismissNotification(item.id);
                       }}
-                      type="button"
                     >
                       <span className="sr-only">Close</span>
                       <XMarkIcon aria-hidden="true" className="h-5 w-5" />
@@ -50,10 +50,10 @@ export const NotificationHub = ({ timeout = 5000 }: NotificationHubProps) => {
                   animate={{ width: '100%' }}
                   className="h-1 bg-slate-500"
                   initial={{ width: '0%' }}
+                  transition={{ duration: timeout / 1000, ease: 'linear' }}
                   onAnimationComplete={() => {
                     dismissNotification(item.id);
                   }}
-                  transition={{ duration: timeout / 1000, ease: 'linear' }}
                 />
               </Card>
             </div>
