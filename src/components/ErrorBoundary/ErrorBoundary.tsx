@@ -37,12 +37,11 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
   render() {
     if (this.state.didCatch) {
       return (
-        <div className="flex min-h-screen flex-col items-center justify-center gap-1 p-1">
+        <div className="flex min-h-screen flex-col items-center justify-center gap-1 p-3 text-center">
           <h1 className="text-sm font-semibold uppercase tracking-wide text-muted">Unexpected Error</h1>
-          <h3 className="sm:text-5x text-4xl font-extrabold tracking-tight">Something Went Wrong</h3>
-          <p className="mt-2 max-w-prose text-center text-base text-muted">
-            We apologize for the inconvenience. If this is the first time you have encountered this issue, we recommend reloading the page.
-            Otherwise, please contact us for assistance.
+          <h3 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">Something Went Wrong</h3>
+          <p className="mt-2 max-w-prose text-sm text-muted sm:text-base">
+            We apologize for the inconvenience. Please contact us for further assistance.
           </p>
           <div className="mt-6">
             <button
