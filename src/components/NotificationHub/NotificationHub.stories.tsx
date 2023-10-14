@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { useNotificationStore } from '@/stores/notification-store';
 
-import { Button } from '..';
+import { Button } from '../Button';
 import { NotificationHub } from './NotificationHub';
 
 type Story = StoryObj<typeof NotificationHub>;

@@ -36,7 +36,7 @@
     "build:storybook": "storybook build",
     "dev": "bun build.js --watch",
     "format": "prettier --write src",
-    "lint": "eslint --fix src",
+    "lint": "tsc --noEmit --emitDeclarationOnly false && eslint --fix src",
     "push": "bun build:dist && npm publish",
     "storybook": "storybook dev -p 6006"
   },

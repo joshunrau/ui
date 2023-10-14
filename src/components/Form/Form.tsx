@@ -1,7 +1,7 @@
 import React, { type ReactNode } from 'react';
 
 import { FormContext } from '@/context/FormContext';
-import { cn } from '@/utils';
+import { cn } from '@/utils/cn';
 
 import { FormSubmitButton } from './FormSubmitButton';
 import { FormText } from './FormText';

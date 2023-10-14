@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '..';
+import { Button } from '../Button';
 import { SlideOver } from './SlideOver';
 
 type Story = StoryObj<typeof SlideOver>;
