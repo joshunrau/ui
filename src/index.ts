@@ -8,6 +8,7 @@ export * from './components/Modal';
 export * from './components/Navbar';
 export * from './components/NotificationHub';
 export * from './components/SlideOver';
+export * from './components/Tabs';
 export * from './components/ThemeToggle';
 export * from './hooks/useTheme';
 export * from './stores/notification-store';
