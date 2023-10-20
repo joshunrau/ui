@@ -3,6 +3,7 @@ export * from './components/Card';
 export * from './components/Dropdown';
 export * from './components/ErrorBoundary';
 export * from './components/Form';
+export * from './components/Heading';
 export * from './components/Modal';
 export * from './components/Navbar';
 export * from './components/NotificationHub';
