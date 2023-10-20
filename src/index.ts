@@ -1,5 +1,6 @@
 export * from './components/Button';
 export * from './components/Card';
+export * from './components/Divide';
 export * from './components/Dropdown';
 export * from './components/ErrorBoundary';
 export * from './components/Form';
