@@ -35,6 +35,13 @@
     "format": "prettier --write src",
     "storybook": "storybook dev -p 6006"
   },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.323.0",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
   "devDependencies": {
     "@joshunrau/eslint-config": "^3.4.3",
     "@storybook/addon-essentials": "^7.6.13",
