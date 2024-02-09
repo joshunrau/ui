@@ -1,6 +1,6 @@
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 
-import '../src/styles.css';
+import '../src/globals.css';
 
 /** @type {import('@storybook/react').Preview} */
 export default {
