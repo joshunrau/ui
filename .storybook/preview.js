@@ -1,16 +1,16 @@
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
-import type { Preview, ReactRenderer } from '@storybook/react';
 
-import './tailwind.css';
+import '../src/styles.css';
 
-const preview: Preview = {
+/** @type {import('@storybook/react').Preview} */
+export default {
   decorators: [
-    withThemeByDataAttribute<ReactRenderer>({
+    withThemeByDataAttribute({
       attributeName: 'data-mode',
       defaultTheme: 'light',
       themes: {
-        light: 'light',
-        dark: 'dark'
+        dark: 'dark',
+        light: 'light'
       }
     })
   ],
@@ -24,5 +24,3 @@ const preview: Preview = {
     }
   }
 };
-
-export default preview;
