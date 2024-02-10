@@ -4,7 +4,15 @@ import { Command as CommandPrimitive } from 'cmdk';
 
 import { cn } from '@/lib/utils';
 
-export const Command = React.forwardRef<
+import { CommandEmpty } from './CommandEmpty';
+import { CommandGroup } from './CommandGroup';
+import { CommandInput } from './CommandInput';
+import { CommandItem } from './CommandItem';
+import { CommandList } from './CommandList';
+import { CommandSeparator } from './CommandSeparator';
+import { CommandShortcut } from './CommandShortcut';
+
+const CommandRoot = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
 >(function Command({ className, ...props }, ref) {
@@ -18,4 +26,14 @@ export const Command = React.forwardRef<
       {...props}
     />
   );
+});
+
+export const Command = Object.assign(CommandRoot, {
+  Empty: CommandEmpty,
+  Group: CommandGroup,
+  Input: CommandInput,
+  Item: CommandItem,
+  List: CommandList,
+  Separator: CommandSeparator,
+  Shortcut: CommandShortcut
 });
