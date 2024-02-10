@@ -25,6 +25,8 @@ export const Default: Story = {
           <Accordion.Content>Yes. It is animated by default, but you can disable it if you prefer.</Accordion.Content>
         </Accordion.Item>
       </>
-    )
+    ),
+    collapsible: true,
+    type: 'single'
   }
 };
