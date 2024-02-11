@@ -33,6 +33,7 @@
   ],
   "scripts": {
     "format": "prettier --write src",
+    "lint": "tsc && eslint --fix src",
     "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
@@ -90,6 +91,7 @@
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "storybook": "^7.6.13",
+    "tsup": "^8.0.2",
     "typescript": "^5.3.3",
     "vite": "^4.4.9"
   },
