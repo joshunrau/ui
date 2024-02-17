@@ -1,10 +1,13 @@
+// @ts-check
+
+import containerQueries from '@tailwindcss/container-queries';
 import tailwindcssAnimate from 'tailwindcss-animate';
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: ['class', '[data-mode="dark"]'],
-  plugins: [tailwindcssAnimate],
+  plugins: [containerQueries, tailwindcssAnimate],
   theme: {
     container: {
       center: true,
